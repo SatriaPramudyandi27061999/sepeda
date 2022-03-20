@@ -1,0 +1,28 @@
+package tugas;
+
+class Sepeda{
+    //ini adalah tempat atribut
+    int gear = 5; 
+    //ini adalah tempat method
+
+    Sepeda(String jenis, String merk, int jumlahRoda){
+        System.out.println("\nSepeda "+jenis+" bermerk "+merk+" memiliki jumlah roda " + jumlahRoda);
+    }
+
+    void ngerem() { 
+    System.out.println("\nSepeda direm"); 
+    } 
+}
+public class AksiSepeda {
+    public static void main(String[] args) { 
+        //membuat objek
+        Sepeda sepedaBalap = new Sepeda("Balap", "GIANT", 2);
+        Sepeda sepedaLipat = new Sepeda("Lipat", "Polygon", 2);
+        Sepeda sepedaGunung = new Sepeda("Gunung", "Fuji", 2);
+        Sepeda sepedaBecak = new Sepeda("Becak", "Kang Becak", 3);
+        //mengakses atribut dan method
+        int gearSepeda = sepedaBalap.gear; 
+        System.out.println("\nJumlah Gigi "+gearSepeda); 
+        sepedaBalap.ngerem(); 
+    }
+}
